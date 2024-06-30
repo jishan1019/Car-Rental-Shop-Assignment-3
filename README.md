@@ -48,14 +48,14 @@ The Car Rental Server is a comprehensive application designed to facilitate the 
    user:
 
     {
-    "email": "johndoe@example.com",
-    "password": "password123"
+    "email": "user@gmail.com",
+    "password": "1234"
     }
 
    admin:
 
    {
-    "email": "admin@example.com",
+    "email": "admin@gmail.com",
     "password": "1234"
    }
 
@@ -69,9 +69,9 @@ The Car Rental Server is a comprehensive application designed to facilitate the 
 base_url:http://localhost:4000
 
  1. GET ALL user : {{base_url}}/api/users
- 2. Get Specific user : {{base_url}}/api/users/66718b2875bc52d8fb1c960e
- 3. PATCH (Update User) : {{base_url}}/api/users/_id
- 4. Delete User : {{base_url}}/api/users/666f003be4e7ddd0967ad63a
+ 2. Get Specific user : {{base_url}}/api/users/6681b6d9d2ec6e0d0b7e0570
+ 3. PATCH (Update User) : {{base_url}}/api/users/6681b6d9d2ec6e0d0b7e0570
+ 4. Delete User : {{base_url}}/api/users/6681b6d9d2ec6e0d0b7e0570
 ```
 
 2.  **AUTH**
@@ -97,10 +97,10 @@ base_url:http://localhost:4000
 
 ```
 1. Get All Car (GET) : {{base_url}}/api/cars
-2. Get Specific Car (GET) : {{base_url}}/api/cars/6671a0fd9ef5e22d225c3862
+2. Get Specific Car (GET) : {{base_url}}/api/cars/6681b8d1119578e85ef91a8f
 3. Create Car (POST / Admin) : {{base_url}}/api/cars
 4. Update Car (PUT / Admin) : {{base_url}}/api/cars
-5. Delete Car (Delete / Admin) : {{base_url}}/api/cars/6671a0fd9ef5e22d225c3862
+5. Delete Car (Delete / Admin) : {{base_url}}/api/cars/6681b8d1119578e85ef91a8f
 
 
 ```

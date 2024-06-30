@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Schema, model } from "mongoose";
 import { TUser, TUserModel } from "./user.interface";
 import { Role } from "./user.const";
@@ -40,6 +41,24 @@ const userSchema = new Schema<TUser, TUserModel>(
     timestamps: true,
   }
 );
+
+//pre save middleware // work on save function
+userSchema.pre("save", async function (next) {
+  try {
+    const hash = await argon2.hash(this.password);
+    this.password = hash;
+
+    next();
+  } catch (err: any) {
+    next(err);
+  }
+});
+
+//post middleware
+userSchema.post("save", function (user, next) {
+  user.password = "";
+  next();
+});
 
 userSchema.post("save", function (user, next) {
   user.password = "";
